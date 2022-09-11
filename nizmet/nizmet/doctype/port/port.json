@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_port",
+ "creation": "2022-02-02 13:52:59.308913",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_port",
+  "port_of_loading",
+  "port_of_discharge"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_port",
+   "fieldtype": "Data",
+   "label": "Name of Port",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "port_of_loading",
+   "fieldtype": "Check",
+   "label": "Port of Loading"
+  },
+  {
+   "default": "0",
+   "fieldname": "port_of_discharge",
+   "fieldtype": "Check",
+   "label": "Port of Discharge"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-25 13:59:38.449208",
+ "modified_by": "Administrator",
+ "module": "Nizmet",
+ "name": "Port",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

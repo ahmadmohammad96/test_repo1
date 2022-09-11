@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include nizmet *.css
+recursive-include nizmet *.csv
+recursive-include nizmet *.html
+recursive-include nizmet *.ico
+recursive-include nizmet *.js
+recursive-include nizmet *.json
+recursive-include nizmet *.md
+recursive-include nizmet *.png
+recursive-include nizmet *.py
+recursive-include nizmet *.svg
+recursive-include nizmet *.txt
+recursive-exclude nizmet *.pyc

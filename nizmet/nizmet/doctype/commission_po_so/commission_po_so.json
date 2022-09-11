@@ -1,0 +1,497 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-02-10 09:18:29.592124",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "naming_series",
+  "company",
+  "column_break_3",
+  "date",
+  "time",
+  "section_break_6",
+  "supplier",
+  "supplier_so_no",
+  "purchased_by",
+  "supplier_payment_terms",
+  "column_break_10",
+  "customer",
+  "buyer_po_no",
+  "sales_by",
+  "buyer_payment_terms",
+  "commission_supplier_section",
+  "commission_income_supplier_column",
+  "commission_income_account_name",
+  "commission_income_rate",
+  "commission_expense_supplier_column",
+  "commission_expense_account_name",
+  "commission_expense_rate",
+  "commission_customer_section",
+  "commission_income_customer_column",
+  "commission_income_customer_account_name",
+  "commission_income_customer_rate",
+  "commission_expense_customer_column",
+  "commission_expense_customer_account_name",
+  "commission_expense_customer_rate",
+  "accounting_dimension_section",
+  "cost_center",
+  "section_break_15",
+  "shipment_due_date",
+  "shipping_term",
+  "origin",
+  "port_of_loading",
+  "column_break_20",
+  "port_of_discharge",
+  "final_destination",
+  "item_details_section",
+  "packing",
+  "column_break_38",
+  "item_description",
+  "item_section",
+  "items",
+  "bl_details_section",
+  "shipper",
+  "shipper_address",
+  "notify",
+  "notify_address",
+  "bl_description",
+  "column_break_46",
+  "consignee",
+  "consignee_address",
+  "bank",
+  "bank_details",
+  "advance_section",
+  "advance_amount",
+  "column_break_51",
+  "paid_date",
+  "terms_and_conditions_section",
+  "tc_name",
+  "terms",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "COM-PS-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Commission PO_SO",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "print_hide": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "supplier_so_no",
+   "fieldtype": "Data",
+   "label": "Supplier SO No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchased_by",
+   "fieldtype": "Link",
+   "label": "Purchased By",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "buyer_po_no",
+   "fieldtype": "Data",
+   "label": "Buyer PO No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_by",
+   "fieldtype": "Link",
+   "label": "Sales By",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Shipping Details"
+  },
+  {
+   "fieldname": "shipment_due_date",
+   "fieldtype": "Date",
+   "label": "Shipment Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shipping_term",
+   "fieldtype": "Link",
+   "label": "Shipping Term",
+   "options": "Shipping Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Link",
+   "label": "Origin",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "port_of_loading",
+   "fieldtype": "Link",
+   "label": "Port of Loading",
+   "options": "Port",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "port_of_discharge",
+   "fieldtype": "Link",
+   "label": "Port of Discharge",
+   "options": "Port",
+   "reqd": 1
+  },
+  {
+   "fieldname": "final_destination",
+   "fieldtype": "Link",
+   "label": "Final Destination",
+   "options": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_supplier_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Supplier"
+  },
+  {
+   "fieldname": "commission_income_supplier_column",
+   "fieldtype": "Column Break",
+   "label": "Commission Income"
+  },
+  {
+   "fieldname": "commission_expense_supplier_column",
+   "fieldtype": "Column Break",
+   "label": "Commission Expense"
+  },
+  {
+   "fieldname": "commission_income_account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account"
+  },
+  {
+   "fieldname": "commission_income_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "commission_expense_account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account"
+  },
+  {
+   "fieldname": "commission_expense_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "commission_customer_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Customer"
+  },
+  {
+   "fieldname": "commission_income_customer_column",
+   "fieldtype": "Column Break",
+   "label": "Commission Income"
+  },
+  {
+   "fieldname": "commission_expense_customer_column",
+   "fieldtype": "Column Break",
+   "label": "Commission Expense"
+  },
+  {
+   "fieldname": "commission_income_customer_account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account"
+  },
+  {
+   "fieldname": "commission_income_customer_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "commission_expense_customer_account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account"
+  },
+  {
+   "fieldname": "commission_expense_customer_rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "packing",
+   "fieldtype": "Link",
+   "label": "Packing",
+   "options": "Packing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Text",
+   "label": "Item Description"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Commission PO_SO Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bl_details_section",
+   "fieldtype": "Section Break",
+   "label": "BL Details"
+  },
+  {
+   "fieldname": "shipper",
+   "fieldtype": "Link",
+   "label": "Shipper",
+   "options": "Shipper",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Consignee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notify",
+   "fieldtype": "Link",
+   "label": "Notify",
+   "options": "Notify Info",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bl_description",
+   "fieldtype": "Link",
+   "label": "BL Description",
+   "options": "BL Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Bank",
+   "options": "Bank Info",
+   "reqd": 1
+  },
+  {
+   "fieldname": "advance_section",
+   "fieldtype": "Section Break",
+   "label": "Advance"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "advance_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Amount",
+   "options": "currency"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "paid_date",
+   "fieldtype": "Date",
+   "label": "Paid Date"
+  },
+  {
+   "fieldname": "column_break_51",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "terms_and_conditions_section",
+   "fieldtype": "Section Break",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "tc_name",
+   "fieldtype": "Link",
+   "label": "Terms",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "supplier_payment_terms",
+   "fieldtype": "Link",
+   "label": "Supplier Payment Terms",
+   "options": "Supplier Payment Terms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "buyer_payment_terms",
+   "fieldtype": "Link",
+   "label": "Buyer Payment Terms",
+   "options": "Buyer Payment Terms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accounting_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimension"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "shipper.shipper_address",
+   "fieldname": "shipper_address",
+   "fieldtype": "Text",
+   "label": "Shipper Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "notify.notify_address",
+   "fieldname": "notify_address",
+   "fieldtype": "Text",
+   "label": "Notify Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "consignee.consignee_address",
+   "fieldname": "consignee_address",
+   "fieldtype": "Text",
+   "label": "Consignee Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "bank.bank_details",
+   "fieldname": "bank_details",
+   "fieldtype": "Text",
+   "label": "Bank Details",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-03-29 11:14:47.396023",
+ "modified_by": "Administrator",
+ "module": "Nizmet",
+ "name": "Commission PO_SO",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

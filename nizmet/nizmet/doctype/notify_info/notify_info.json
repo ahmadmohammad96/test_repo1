@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:notify_name",
+ "creation": "2022-02-02 15:35:55.211417",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "notify_name",
+  "notify_address"
+ ],
+ "fields": [
+  {
+   "fieldname": "notify_name",
+   "fieldtype": "Data",
+   "label": "Notify Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "notify_address",
+   "fieldtype": "Text Editor",
+   "label": "Notify Address"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-25 12:47:49.786915",
+ "modified_by": "Administrator",
+ "module": "Nizmet",
+ "name": "Notify Info",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
