@@ -414,6 +414,7 @@ fixtures = [
 		"dt":"Property Setter",
 		"filters":[
 			["name","in",[
+				'Sales Order-customer-allow_on_submit',
 				'BL Description-bl_description-fieldtype',
 				'Shipper-shipper_address-fieldtype',
 				'Notify Info-notify_address-fieldtype',
